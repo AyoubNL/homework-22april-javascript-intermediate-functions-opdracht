@@ -13,12 +13,16 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // * Hoe zorg ik ervoor dat dit ook werkt wanneer de array 100 entries bevat?
 // * Hoe zorgt ik ervoor dat wanneer ik een cijfer tegenkom die aan de conditie voldoet, ik dit ergens kan bijhouden?
 // Log het antwoord in de terminal.
-
 // ---- Verwachte uitkomst: 6
 
-
-console.log(grades.length)
-
+function cumLaude(students) {
+    for (let i = 0; i < students.length; i++) {
+        if (students[i] >= 8) {
+            console.log(students[i])
+        }
+    }
+}
+cumLaude(grades)
 
 
 /*  1b: Omschrijven tot een herbruikbare functie   */
@@ -31,7 +35,7 @@ console.log(grades.length)
 // cumLaude([6, 4, 5]) geeft 0
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
 
-
+// function cumLaude(){}
 
 
 /* Opdracht  2: Gemiddeld cijfer */
@@ -61,8 +65,6 @@ console.log(grades.length)
 /* 2c: Afronden op twee decimalen */
 // Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
 // Tip: Google is your best friend!
-
-
 
 
 /* Bonusopdracht: hoogste cijfer */
