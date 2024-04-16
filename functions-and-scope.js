@@ -57,9 +57,10 @@ let total = 0
 for (let i = 0; i < grades.length; i++) {
     amount++
     total += grades[i]
-}
-console.log(total / amount)
+    average = total / amount
 
+}
+console.log(average)
 
 /* 2b: Omschrijven tot een herbruikbare functie */
 // Schrijf een functie genaamd averageGrade, die een array van cijfers verwacht (zoals grades) en het gemiddelde cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 2a.
@@ -70,11 +71,30 @@ console.log(total / amount)
 // averageGrade(grades) geeft 6.642857142857143
 // averageGrade([6, 4, 5]) geeft 5
 // averageGrade([8, 9, 4, 6, 10]) geeft 7.4
+let totalGrades = 0
+let amountOfStudents = 0
 
+function averageGrade(students) {
+
+    for (let i = 0; i < students.length; i++) {
+
+        amountOfStudents++
+        totalGrades += students[i]
+    }
+    console.log(totalGrades / amountOfStudents)
+
+}
+
+// averageGrade(grades)
+// averageGrade(novi)
+// averageGrade(hva)
 
 /* 2c: Afronden op twee decimalen */
 // Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
 // Tip: Google is your best friend!
+
+
+console.log(average.toFixed(2))
 
 
 /* Bonusopdracht: hoogste cijfer */
@@ -88,6 +108,16 @@ console.log(total / amount)
 
 // ---- Verwachte uitkomst: 9
 
+let max = 0
+
+for (let i = 0; i < grades.length; i++) {
+
+    if (grades[i] >= max) {
+        max = grades[i]
+    }
+}
+
+console.log(max)
 
 /* 3b: Omschrijven tot een herbruikbare functie */
 // Schrijf een functie genaamd highestGrade, die een array van cijfers verwacht (zoals grades) en het hoogste cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 3a.
@@ -98,3 +128,26 @@ console.log(total / amount)
 // highestGrade(grades) geeft 9
 // highestGrade([6, 4, 5]) geeft 6
 // highestGrade([8, 9, 4, 6, 10]) geeft 10
+
+const uva = [8, 9, 4, 6, 10]
+const vu = [6, 4, 5]
+
+
+let highest = 0
+
+function highestGrade(students) {
+    for (let i = 0; i < students.length; i++) {
+        if (students[i] > highest) {
+           highest = students[i]
+
+        }
+
+    }
+    console.log(highest)
+
+}
+
+highestGrade(vu)
+// highestGrade(uva)
+
+
