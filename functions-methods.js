@@ -9,8 +9,14 @@
 // getEmailDomain("t.mellink@novi.nl") geeft novi.nl
 // getEmailDomain("a.wiersma@outlook.com") geeft outlook.com
 
+let email = []
 
-
+function getEmailDomain(email){
+    console.log(email.slice(email.indexOf('@') +1));
+}
+getEmailDomain("n.eeken@novi-education.nl")
+getEmailDomain("t.mellink@novi.nl")
+getEmailDomain("a.wiersma@outlook.com")
 
 /* Opdracht  2 */
 // Schrijf een functie genaamd typeOfEmail, die een emailadres verwacht. De functie checkt of het emailadres een novi domein heeft (medewerker), een novi-education domein (student), of extern domein (zoals gmail of outlook)
@@ -19,7 +25,23 @@
 // typeOfEmail("t.mellink@novi.nl") geeft geeft "Medewerker"
 // typeOfEmail("novi.nlaapjesk@outlook.com") geeft geeft "Extern" <-- deze moet het ook doen!
 // typeOfEmail("a.wiersma@outlook.com") geeft "Extern"
+let emailadres = []
+function typeOfEmail(emailadres) {
+    if (emailadres.includes('@novi-education.nl')) {
+        console.log('Student')
+    }
+    else if (emailadres.includes('@novi.nl')) {
+        console.log('Medewerker')
+    }
+    else {
+        console.log('Extern')}
 
+}
+
+typeOfEmail("n.eeken@novi-education.nl")
+typeOfEmail("t.mellink@novi.nl")
+typeOfEmail("novi.nlaapjesk@outlook.com")
+typeOfEmail("a.wiersma@outlook.com")
 
 
 /* Opdracht  3 */
@@ -34,3 +56,14 @@
 // checkEmailValidity("n.eekenanovi.nl") geeft false - want geen @
 // checkEmailValidity("n.eeken@novinl.") geeft false - want de punt mag niet als laatst
 // checkEmailValidity("tessmellink@novi,nl") geeft false - want er staat een komma in
+
+let mail = ''
+function checkEmailValidity(mail) {
+    console.log((mail.includes('@') && !(mail.includes(',') || (mail.endsWith('.')))))}
+
+checkEmailValidity("n.eeken@novi.nl")
+checkEmailValidity("tessmellink@novi.nl")
+checkEmailValidity("n.eekenanovi.nl")
+checkEmailValidity("n.eeken@novinl.")
+checkEmailValidity("tessmellink@novi,nl")
+
